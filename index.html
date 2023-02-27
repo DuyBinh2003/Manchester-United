@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester United 2023</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class = "header">
+        <div class="navbar">
+            <ul class="navbar_tieude">
+                <li><a class="navbar_tieude__item" href="#mu">MANCHESTER UNITED</a></li>
+                <li><a class="navbar_tieude__item" href="#player">PLAYER</a></li>
+                <li><a class="navbar_tieude__item" href="#manager">MANAGER</a></li>
+                <li><a class="navbar_tieude__item" href="#legend">LEGEND</a></li>
+            </ul>
+            <ul class="navbar_tieude">
+                <li class="navbar_tieude__item">LOG IN</li>
+                <li class="navbar_tieude__item">SIGN UP</li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Background -->
+    <div class="background" id="mu"></div>
+
+    <!-- player -->
+    <main class="team" id="player">
+        <h1 class ="team__title">Team Player</h1>
+        <div class="team__player">
+            <div class="lineup">
+                <h2 class="lineup__title">Lineup</h2>
+                <div class="lineup__player">
+                    <!-- tiền đạo -->
+                    <div class="position" >
+                        <div class="player" id="27"></div>
+                    </div>
+                    <!-- Hộ công -->
+                    <div class="position" >
+                        <div class="player" id="10"></div>
+                        <div class="player" id="8"></div>
+                        <div class="player" id="25"></div>
+                    </div>
+                    <!-- Tiền vệ trụ -->
+                    <div class="position" >   
+                        <div class="player" id="14"></div>
+                        <div class="player" id="18"></div>
+                    </div>
+                    <!-- Hậu vệ -->
+                    <div class="position">
+                        <div class="player" id="23"></div>
+                        <div class="player" id="6"></div>
+                        <div class="player" id="19"></div>
+                        <div class="player" id="20"></div>
+                    </div>
+                    <!-- Thủ môn -->
+                    <div class="position" >
+                        <div class="player" id="1"></div>
+                    </div>
+                </div>  
+            </div>
+            <div class="team__player__space"></div>
+            <div class="sub">
+                <h2 class="sub__title">Substitution</h2>
+                <div class="sub__player">
+                    <div class = "sub__player__column">
+                        <div class="player" id="49"></div>
+                        <div class="player" id="21"></div>
+                        <div class="player" id="17"></div>
+                        <div class="player" id="5"></div>
+                        <div class="player" id="26"></div>
+                    </div>
+                    <div class = "sub__player__column">
+                        <div class="player" id="9"></div>
+                        <div class="player" id="15"></div>
+                        <div class="player" id="39"></div>
+                        <div class="player" id="29"></div>
+                        <div class="player" id="12"></div>
+                    </div>
+                </div>
+            </div>  
+        </div>   
+    </main>
+    <!-- Manager -->
+    <div class="manager" id="manager">
+        <div class="manager__img">
+            <img src="https://www.footyrenders.com/render/Erik-ten-Hag.png" alt="">
+        </div>
+        <div class="manager__info">
+            <h1>Erik ten Hag</h1>
+                <div class="manager__info__title">Birth: 02/02/1970</div>
+                <div class="manager__info__title">Nation: Holland
+                    <img src="https://cdn.pixabay.com/animation/2022/09/01/03/10/03-10-03-5_640.png" alt="">
+                </div>
+            <div class="manager__info__talk">“Man United sẽ thi đấu một cách chủ động ngay cả khi có bóng hay không có bóng. 
+                Đó là kế hoạch và chúng tôi sẽ cố gắng hết sức để làm điều đó. Các học trò cần chủ động trong mọi tình huống”
+            </div>
+        </div>
+        <div class="manager__info">
+            <div class="manager__trophies__item">
+                <div class="manager__trophies__title">Team:</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Eredivisie_Trophy.png/800px-Eredivisie_Trophy.png" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Eredivisie_Trophy.png/800px-Eredivisie_Trophy.png" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/KNVB_Trophy.png" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/KNVB_Trophy.png" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/it/thumb/a/a1/Supercoppa_dei_Paesi_Bassi.svg/1200px-Supercoppa_dei_Paesi_Bassi.svg.png" alt="">
+            </div>
+            <div class="manager__trophies__item">
+                <div class="manager__trophies__title">Personal:</div>
+                <p>1th coach in Holland (2019, 2016)</p>
+                <p>4th coach in the world (2019)</p>
+            </div>
+            <div class="manager__trophies__item">
+                <div class="inMU">
+                    <div class="match">
+                        <div class="manager__trophies__title">Match:</div>
+                        <p>11 / 2 / 4</p>
+                    </div>
+                    <div class="goals">
+                        <div class="manager__trophies__title">Goals:</div>
+                        <p>27 / 20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend" id="legend">
+        <div class="legend__row">
+            <div onclick="showLegendInfo(1)" class="legend__player" id="1"></div>
+            <div onclick="showLegendInfo(2)" class="legend__player" id="2"></div>
+            <div onclick="showLegendInfo(3)" class="legend__player" id="3"></div>
+            <div onclick="showLegendInfo(4)" class="legend__player" id="4"></div>
+            <div onclick="showLegendInfo(5)" class="legend__player" id="5"></div>
+            <div onclick="showLegendInfo(6)" class="legend__player" id="6"></div>            
+            <div onclick="showLegendInfo(7)" class="legend__player" id="7"></div>          
+            <div onclick="showLegendInfo(8)" class="legend__player" id="8"></div>
+            <div onclick="showLegendInfo(9)" class="legend__player" id="9"></div>
+            <div onclick="showLegendInfo(10)" class="legend__player" id="10"></div>
+        </div>
+    </div>
+
+    <!-- Foot -->
+    <div class="foot">
+        <div class="foot__items logo">
+
+            <img src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734544/Adidas_Comp_LightBG_180xAuto1547460175451.png" alt="">
+            <img src="https://assets.manutd.com/AssetPicker/images/0/0/17/223/1171310/TeamViewer-logo-blue-footer-new1669974832812.png" alt="">
+            <img src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734554/Chevrolet_Comp_LightBG_180xAuto1547460485843.png" alt="">
+            <img src="https://ebaohiem.com/images/source/tin_tuc/Congty/bao-hiem-aon.png" alt="">
+        </div>
+        <div class="foot__items icon">
+            <a href="https://www.instagram.com/manchesterunited/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/manchesterunited/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UC6yW44UGJJBvYTlfC7CRg2Q"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com/ManUtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>       
+        </div>
+    </div>
+
+    <script src = "main.js"></script>
+</body>
+</html>

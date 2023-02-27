@@ -1,0 +1,481 @@
+:root{
+--red: rgb(132, 23, 23);
+--logo: url(https://upload.wikimedia.org/wikipedia/vi/thumb/a/a1/Man_Utd_FC_.svg/1200px-Man_Utd_FC_.svg.png);
+--background: url(https://media.istockphoto.com/id/1201544779/vi/anh/m%E1%BA%B7t-tr%C6%B0%E1%BB%9Bc-tr%E1%BB%91ng-k%E1%BA%BFt-c%E1%BA%A5u-n%E1%BB%81n-b%E1%BA%A3ng-ph%E1%BA%A5n-%C4%91en-th%E1%BB%B1c-s%E1%BB%B1-trong-kh%C3%A1i-ni%E1%BB%87m-%C4%91%E1%BA%A1i-h%E1%BB%8Dc-cho-h%C3%ACnh-n%E1%BB%81n-tr%E1%BA%BB-em.jpg?b=1&s=612x612&w=0&k=20&c=6TjOUeUlMX_5C1sNYWvlIgFL9jYODWT7lLurO2U4mxs=);
+}
+*{
+    scroll-behavior: smooth;
+}
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: inherit;
+    font-weight: 500;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+a{
+    text-decoration: none;
+}
+/* Header */
+.navbar{
+    position: fixed;
+    top:0;
+    font-weight: 600;
+    background-color: var(--red);
+    color:rgb(230, 194, 194);
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    width: 100%;
+    padding-top: 5px;
+    z-index: 100;
+}
+.navbar_tieude{
+    margin: auto 16px;
+    display: flex;
+    list-style: none;
+}
+.navbar_tieude__item{
+    position: relative;
+    text-decoration: none;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    color:rgb(230, 194, 194);
+}
+.navbar_tieude__item:hover{
+    cursor: pointer;
+}
+.navbar_tieude__item::after{
+    content: "";
+    height: 5px;
+    width: 0px;
+    position: absolute;
+    background-color: rgb(210, 109, 109);
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;
+    transition: 0.5s ease-in;
+}
+.navbar_tieude__item:hover::after{
+    transform: translateX(100%);
+    width: 50%;
+}
+/* Background */
+.background img{
+    width: 100%;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+/* background */
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/background/nen1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation: animationBackground 30s ease-in infinite alternate-reverse forwards;
+    animation-play-state: running;
+}
+@keyframes  animationBackground{
+    0%{
+        background-image: url(./img/background/nen2.jpg);
+    }
+    20%{
+        background-image: url(./img/background/nen3.jpg);
+    }
+    40%{
+        background-image: url(./img/background/nen4.jpg);
+    }
+    60%{
+        background-image: url(./img/background/nen5.jpg);
+    }
+    80%{
+        background-image: url(./img/background/nen6.jpg);
+    }
+    100%{
+        background-image: url(./img/background/nen1.jpg);
+    }
+}
+/* Team player */
+.team{
+    padding-top: 100px;
+    position: relative;
+    min-height: 120vh;
+}
+.team__title{
+    margin: 0;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    max-width: 200px;
+    text-align: center;
+    background-color: var(--red);
+    color: #fff;
+}
+.team__player{
+    height: 100%;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+/* đội hình chính */
+.lineup{
+    flex: 1.7;
+    height: 100%;
+}
+.lineup__title{
+    padding-left: 20%;  
+    margin: 20px 0;
+    color: var(--red);
+}
+.lineup__player{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+.position{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+/* dự bị */
+.sub{
+    flex: 1;
+    height: 100%;
+}
+.sub__title{
+    padding-left: 20%;;
+    margin: 20px 0;
+    color: var(--red);
+}
+.sub__player{
+    display: flex;
+    justify-content: space-evenly;
+    margin:0 10px;
+    border-radius: 30px;
+}
+.sub__player__column{
+    display: flex;
+    margin: auto ;
+    flex-direction: column;
+    align-items: center;
+}
+.team__player__space{
+    flex: 0.05;
+    height: 100vh;
+    background-color: var(--red);
+    border-radius: 15px;
+    margin: 5%  0;
+}
+@media (max-width: 880px) {
+    .team__player__space{
+        display: none;
+    }
+}
+
+/* Thẻ cầu thủ */
+.player {
+    height: 160px;
+    width: 140px;
+    margin: 5px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: width .3s ease-in-out;
+}
+.player__img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.player__title {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    max-width: 60%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;  
+    transition: all .8s ease-in-out;
+    opacity: 0.3;
+    transform: translateX(-120%);
+}
+.player__title p{
+    margin: 0;
+}
+.player:hover .player__title{
+    transform: translatex(0);  
+    opacity: 1;
+}
+
+/*  Manager */
+.manager{
+    min-height: fit-content;
+    margin-top: 100px;
+    padding: 0 150px;
+    color: #fff;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.manager__info{
+    margin: 10px 0;
+}
+
+/* câu nói */
+.manager__info__talk{
+    max-width: 250px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* quốc kỳ */
+.manager__info__title img{
+    height: 20px;
+    margin-left: 5px;
+}
+/* danh hiệu */
+.manager__trophies__item img{
+    height: 70px;
+    margin: 0 10px;
+}
+.manager__info__title{
+    font-size: 15px;
+    height: 40px;
+}
+/* ten hag */
+.manager__img{
+    height: 100vh;
+}
+.manager__img img{
+    height: 100%;
+}
+.manager__trophies__title{
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+.manager__trophies__item{
+    font-size: 15px;
+    margin: 8px 0;
+}
+.inMU{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Legend */
+.legend{
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 20px;
+    padding-top: 100px;
+}
+.legend__row{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+.legend__player{
+    margin: 15px 0;
+    border-radius: 15%;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+.legend__player__info{
+    max-width: 140px;
+    z-index: 2;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.legend__player__info p{
+    margin: 2px 0;
+}
+.legend__title{
+    height: 4px;
+    width: 40%;
+    background-color: var(--red);
+    border-radius: 25%;
+    transition: all ease 1s;
+}
+.legend__player:hover{
+    cursor: pointer;
+    background-size: 115%;
+}
+.legend__player:hover .legend__title{
+    width: 80%;
+}
+/* foot */
+.foot{
+    margin-top: 80px;
+    padding:20px 0;
+    display: flex;
+    background-color: grey;
+}
+.foot__items{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    flex:2;
+}
+.icon{
+    flex:1;
+}
+.foot__items img{
+    height: 40px;
+    margin: 0 18px;
+}
+.foot__items i{
+    background-color: #fff;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 2px;
+    font-size: 35px;
+    margin: 0 8px;
+    color: black;
+    transition: 0.5s ease-in;
+}
+.foot__items i:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: black;
+}
+
+/* Show info legend */
+@keyframes showModal {
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    animation: showModal .25s ease;
+}
+.modal__layout {
+    position: absolute;
+    background-color: rgb(42, 39, 39, 0.4);
+    height: 100%;
+    width: 100%;
+}
+.modal__body {
+    position: absolute;
+    transform: translate(50%,50%);
+    height: 50%;
+    min-width: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+}
+.body__img{
+    background-color: var(--red);
+    height: 100%;
+    flex: 1;
+    position: relative;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+}
+.body__info{
+    background-color: #fff;
+    height: 100%;
+    flex: 2;
+    padding-left: 30px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+    font-size: 16px;
+}
+.body__img img{
+    height: 120%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.body__info h3{
+    padding-left: 30px;
+}
+.body__tranform-before,
+.body__tranform-after {
+    height: 30%;
+    width: 15%;
+    background-color: rgba(16, 15, 15, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100000;
+    display: flex;
+    cursor: pointer;
+}
+.body__tranform-before i,
+.body__tranform-after i {
+    margin: auto;
+    font-size: 50px;
+    color: #fff;
+    
+}
+.body__tranform-before {
+    transform: translate(-470%,110%);
+}
+.body__tranform-after {
+    transform: translate(470%,110%);
+}
+.body__info-nation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 200px;
+}
+.body__info-nation img{
+    height: 30px;
+}
+.body__info-goal{
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+}
+.body__info-trophies{
+    display: flex;
+}
+.body__info-trophies img{
+    height: 100px;
+}
+.body__info-trophie__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
